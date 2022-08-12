@@ -1,0 +1,21 @@
+{
+  "name": "studio-execution-logs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "twilio-run",
+    "deploy": "twilio serverless:deploy --force"
+  },
+  "dependencies": {
+    "@twilio/runtime-handler": "1.2.3",
+    "dayjs": "^1.11.4",
+    "twilio": "^3.56"
+  },
+  "devDependencies": {
+    "twilio-run": "^3.4.2"
+  },
+  "engines": {
+    "node": "14"
+  }
+}
