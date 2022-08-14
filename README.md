@@ -20,6 +20,7 @@ Update the copied .env file with an editor. The contents to be updated are as fo
 | API_KEY     | Twilio API Key (String starting with 'SK')     |
 | API_SECRET  | Twilio API Secret (Pair of API Key)            |
 | FLOW_SID    | Studio Flow Sid (String starting with 'FW')    |
+| PASSWORD    | (Option) If set, the `p` option is required.   |
 
 ## Local execute
 
@@ -40,6 +41,7 @@ If you want to download logs other than today's, you can use the following param
 | y      | Year (ex. 2022)      |
 | m      | Month (1-12)         |
 | d      | Date of Month (1-31) |
+| p      | Password (in `.env`) |
 
 For example, if you want to download the logs for August 1, specify the following.
 

@@ -50,10 +50,14 @@ exports.handler = async function (context, event, callback) {
   try {
     // Get parameters
     const now = dayjs().tz().startOf('day').startOf('month'); // Get first day of month(JST)
-    const { m, y, d } = event;
+    const { m, y, d, p } = event;
     const month = m ? m - 1 : now.get('month');
     const year = y || now.get('year');
     const date = d || now.get('date');
+    const password = p || '';
+    if (context.PASSWORD && context.PASSWORD !== password) {
+      throw new Error('Un match a password.');
+    }
 
     // Response
     const response = new Twilio.Response();
